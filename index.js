@@ -1,5 +1,7 @@
+const { render } = require('ejs');
 const express = require('express')
 const app = express()
+app.set('view engine', 'ejs');
 const PORT = 3000
 
 app.listen(PORT, ()=> {
@@ -7,13 +9,14 @@ app.listen(PORT, ()=> {
 })
 
 app.get('/', (req, res)=> {
-   res.send('Welcome to the Home page!') 
+    res.render('index', {name: "Sterling Archer", age: 35})
 })
 
 app.get('/about', (req, res)=> {
-   res.send('Welcome to the About page!') 
+
+    res.render('about')
 })
 
 app.get('/blog', (req, res)=> {
-   res.send('Welcome to the Blog page!') 
+    res.render('blog-directory')
 })
