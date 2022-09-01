@@ -9,7 +9,7 @@ app.listen(PORT, ()=> {
 })
 
 app.get('/', (req, res)=> {
-    res.render('index', {name: "Sterling Archer", age: 35})
+    res.render('index', {name: "Big ass Archer", age: 35})
 })
 
 app.get('/about', (req, res)=> {
